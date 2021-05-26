@@ -196,7 +196,9 @@ async function push(
   return wrapWithErrorMessage(
     reportPlatformFailures(
       safeExec(
-        `${idbPath} --log ${idbLogLevel} file push --udid ${udid} --bundle-id ${bundleId} '${src}' '${dst}'`,
+        // fix by fang
+        // `${idbPath} --log ${idbLogLevel} file push --udid ${udid} --bundle-id ${bundleId} '${src}' '${dst}'`,
+        `IDB_COMPANION=localhost:10882 ${idbPath} --log ${idbLogLevel} file push --udid ${udid} --bundle-id ${bundleId} '${src}' '${dst}'`,
       )
         .then(() => {
           return;
@@ -218,7 +220,9 @@ async function pull(
   return wrapWithErrorMessage(
     reportPlatformFailures(
       safeExec(
-        `${idbPath} --log ${idbLogLevel} file pull --udid ${udid} --bundle-id ${bundleId} '${src}' '${dst}'`,
+        // fix by fang
+        // `${idbPath} --log ${idbLogLevel} file pull --udid ${udid} --bundle-id ${bundleId} '${src}' '${dst}'`,
+        `IDB_COMPANION=localhost:10882 ${idbPath} --log ${idbLogLevel} file pull --udid ${udid} --bundle-id ${bundleId} '${src}' '${dst}'`,
       )
         .then(() => {
           return;
