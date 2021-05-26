@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.license = { :type => 'MIT' }
   spec.homepage = 'https://github.com/facebook/flipper'
   spec.summary = 'SonarKit core cpp code with network implementation'
-  spec.authors = 'Facebook'
+  spec.authors = 'Facebook' 
   spec.source = { :git => 'hhttp://code.soulapp-inc.cn/soul_ios/flipper.git',
                   :tag => 'v'+flipperkit_version+"_soul" }
   spec.module_name = 'Flipper'
