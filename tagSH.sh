@@ -30,7 +30,7 @@ fi
 echo "inputpodtag is: $inputpodtag"
 
 git tag ${inputpodtag}
-git push origin --tags
+git push soul --tags
 
 ################################ 获取podspec文件名称 ################################
 
@@ -89,7 +89,7 @@ echo 'nowDIR->' ${nowDIR}
 git status
 git add .
 git commit -m "[Add] ${podName} (${version})"
-git push
+git push 
 
 cd ..
 rm -rf $sourceRepoName
